@@ -1,0 +1,10 @@
+#attach {
+    border: 1px dotted #eee;
+    height: 300px;
+}
+
+
+#attach:hover {
+    border: 1px dotted #212529;
+    cursor: pointer;
+}

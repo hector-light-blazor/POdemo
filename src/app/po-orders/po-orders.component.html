@@ -1,0 +1,67 @@
+<div class="container">
+    <h4 style="text-align: center">Purchasing Requisition Form</h4>
+   
+
+
+      <div class="card" >
+          <div class="float-right">
+              <button (click)="openPDesc = !openPDesc;" class="btn btn-info">
+                  <i *ngIf="openPDesc" class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i *ngIf="!openPDesc" class="fa fa-arrow-down" aria-hidden="true"></i>
+              </button>
+            </div>
+        <div *ngIf="openPDesc"  class="card-body">
+          <h5 class="card-title">Purchase Description</h5>
+        
+          <app-pdescription></app-pdescription>
+        </div>
+      
+      </div>
+       
+      <br>
+
+      <br *ngIf="!openPDesc" >
+
+      <div class="card">
+          <div class="float-right">
+              <button (click)="openPU = !openPU;" class="btn btn-info">
+                  <i *ngIf="openPU" class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i *ngIf="!openPU" class="fa fa-arrow-down" aria-hidden="true"></i>
+              </button>
+            </div>
+
+        <div  *ngIf="openPU" class="card-body">
+          <h5 class="card-title">COMPLETED FOR PURCHASES UNDER $1000</h5>
+          <app-under1000></app-under1000>
+        </div>
+      </div>
+       
+      <br>
+      <br *ngIf="!openPU" >
+
+      <div class="card">
+
+          <div class="float-right">
+              <button (click)="openPG = !openPG;" class="btn btn-info">
+                  <i *ngIf="openPG" class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i *ngIf="!openPG" class="fa fa-arrow-down" aria-hidden="true"></i>
+              </button>
+            </div>
+        <div *ngIf="openPG" class="card-body">
+          <h5 class="card-title">COMPLETED FOR PURCHASES OF $1000 OR GREATER (+)</h5>
+          <app-under1000></app-under1000>
+        </div>
+      </div>
+      
+       <br>
+       <br *ngIf="!openPG" >
+       
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">ATTACH PO</h5>
+          <app-attachments></app-attachments>
+        </div>
+      </div>
+      <br>
+   
+</div>
