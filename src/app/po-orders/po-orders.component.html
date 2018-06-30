@@ -1,7 +1,6 @@
 <div class="container">
     <h4 style="text-align: center">Purchasing Requisition Form</h4>
-   
-
+  
 
       <div class="card" >
           <div class="float-right">
@@ -15,11 +14,8 @@
         
           <app-pdescription></app-pdescription>
         </div>
-      
       </div>
-       
       <br>
-
       <br *ngIf="!openPDesc" >
 
       <div class="card">
@@ -57,11 +53,19 @@
        <br *ngIf="!openPG" >
        
       <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">ATTACH PO</h5>
+          <div class="float-right">
+              <button (click)="openA = !openA;" class="btn btn-info">
+                  <i *ngIf="openA" class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i *ngIf="!openA" class="fa fa-arrow-down" aria-hidden="true"></i>
+              </button>
+            </div>
+        <div *ngIf="openA" class="card-body">
+          <h5 class="card-title">ATTACHMENTS</h5>
           <app-attachments></app-attachments>
         </div>
       </div>
       <br>
+
+      <button (click)="onSave()" class="btn btn-primary">Submit</button>
    
 </div>

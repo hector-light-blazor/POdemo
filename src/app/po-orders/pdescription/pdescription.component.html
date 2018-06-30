@@ -3,32 +3,32 @@
      
       <div class="form-group">
           <label for="exampleInputEmail1">Date:</label>
-          <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Date">
+          <input [(ngModel)]="app.attributes.edate" name="date" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Date">
       </div>
 
       <div class="form-group">
-            <label for="InputProjectName">Project Name:</label>
-            <input type="text" class="form-control" id="InputProjectName"  placeholder="Enter Project">
+            <label for="InputProjectName">Project Name: (If applicable)</label>
+            <input [(ngModel)]="app.attributes.pname" name="pname" type="text" class="form-control" id="InputProjectName"  placeholder="Enter Project">
         </div>
      
        <div class="form-group">
           <label for="deparmentInput">Department:</label>
-          <input type="text" class="form-control" id="deparmentInput"  placeholder="Enter Deparment">
+          <input [(ngModel)]="app.attributes.department" name="dep" type="text" class="form-control" id="deparmentInput"  placeholder="Enter Deparment">
       </div>
 
       <div class="form-group">
           <label for="deparmentInput">Delivered to:</label>
-          <input type="text" class="form-control" id="deparmentInput"  placeholder="Enter Delivery">
+          <input [(ngModel)]="app.attributes.deliverTo" name="del" type="text" class="form-control" id="deparmentInput"  placeholder="Enter Delivery">
       </div>
 
       <div class="form-group">
           <label for="quantityInput">Quantity:</label>
-          <input type="number" class="form-control" id="quantityInput"  placeholder="Enter Quantity">
+          <input [(ngModel)]="app.attributes.quantity" name="qnty" type="number" class="form-control" id="quantityInput"  placeholder="Enter Quantity">
       </div>
 
       <div class="form-group">
           <label for="estimateInput">Estimated Cost:</label>
-          <input type="text" class="form-control" id="estimateInput"  placeholder="Enter Estimated">
+          <input [(ngModel)]="app.attributes.estimate_cost" name="cost" type="number" class="form-control" id="estimateInput"  placeholder="Enter Estimated">
       </div>
 
         <div class="form-group">
@@ -43,7 +43,7 @@
 
         <div class="form-group">
                 <label for="purposepurchaseInput">Purpose of purchase (if necessary attach in attachments tab for detailed specifications):</label>
-                <textarea class="form-control" id="purposepurchaseInput" rows="3"></textarea>
+                <textarea [(ngModel)]="app.attributes.purpose" name="purpose" class="form-control" id="purposepurchaseInput" rows="3"></textarea>
         </div>
         <h5>Proposed Source of Funds (Code (s)):</h5>
 

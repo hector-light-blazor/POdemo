@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-po-orders',
@@ -10,9 +11,14 @@ export class PoOrdersComponent implements OnInit {
   openPDesc: boolean = true;
   openPU: boolean = true;
   openPG: boolean = true;
-  constructor() { }
+  openA: boolean = true;
+  constructor(private app: AppService) { }
 
   ngOnInit() {
+  }
+
+  onSave() {
+    console.log(this.app.attributes);
   }
 
 

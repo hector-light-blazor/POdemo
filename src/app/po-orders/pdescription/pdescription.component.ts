@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../../app.service';
 
 @Component({
   selector: 'app-pdescription',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PdescriptionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public app: AppService) { }
 
   ngOnInit() {
   }

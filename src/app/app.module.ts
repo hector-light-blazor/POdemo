@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -11,6 +12,7 @@ import { PoOrdersComponent } from './po-orders/po-orders.component';
 import { PdescriptionComponent } from './po-orders/pdescription/pdescription.component';
 import { Under1000Component } from './po-orders/under1000/under1000.component';
 import { AttachmentsComponent } from './attachments/attachments.component';
+import { AppService } from './app.service';
 
 
 @NgModule({
@@ -26,9 +28,11 @@ import { AttachmentsComponent } from './attachments/attachments.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
+    
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
