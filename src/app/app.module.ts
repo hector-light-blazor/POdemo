@@ -13,6 +13,8 @@ import { PdescriptionComponent } from './po-orders/pdescription/pdescription.com
 import { Under1000Component } from './po-orders/under1000/under1000.component';
 import { AttachmentsComponent } from './attachments/attachments.component';
 import { AppService } from './app.service';
+import { Greater1000Component } from './po-orders/greater1000/greater1000.component';
+import { VendorInfoComponent } from './po-orders/vendor-info/vendor-info.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { AppService } from './app.service';
     PdescriptionComponent,
     PoOrdersComponent,
     Under1000Component,
-    AttachmentsComponent
+    AttachmentsComponent,
+    Greater1000Component,
+    VendorInfoComponent
   ],
   imports: [
     BrowserModule,
